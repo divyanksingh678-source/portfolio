@@ -1,0 +1,374 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: -2rem;
+  margin-bottom: 3rem;
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-picture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  font-size: 4rem;
+}
+
+.profile-caption {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+.hero-location {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* About Section */
+.about-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* Interests Section */
+.interests-section {
+  margin-bottom: 3rem;
+}
+
+.interests-section h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 1rem;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.interest-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-top: 4px solid #667eea;
+}
+
+.interest-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border-top-color: #764ba2;
+}
+
+.interest-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.interest-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Details Section */
+.details-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.details-section h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 1rem;
+}
+
+.details-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.detail-label {
+  font-weight: 700;
+  color: #0066cc;
+  min-width: 140px;
+}
+
+.detail-value {
+  color: #555;
+  word-break: break-word;
+}
+
+.detail-value a {
+  color: #0066cc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.detail-value a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #0066cc;
+  padding-bottom: 1rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0066cc;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    margin: -1rem;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-placeholder {
+    font-size: 3rem;
+  }
+
+  .about-section,
+  .details-section,
+  .skills-section {
+    padding: 1.5rem;
+  }
+
+  .details-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .interest-card {
+    padding: 1.5rem;
+  }
+
+  .interest-icon {
+    font-size: 2.5rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .about-section h2,
+  .details-section h2,
+  .skills-section h2,
+  .interests-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .detail-label {
+    min-width: 100px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}

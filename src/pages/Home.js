@@ -77,10 +77,6 @@ function Home() {
               <span className="detail-label">Education:</span>
               <span className="detail-value">B.Tech (CSE), Mahindra University (2023-Present)</span>
             </div>
-            <div className="detail-item">
-              <span className="detail-label">CGPA:</span>
-              <span className="detail-value">6.46 / 10</span>
-            </div>
           </div>
 
           <div className="details-column">

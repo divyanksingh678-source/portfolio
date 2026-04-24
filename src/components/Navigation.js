@@ -35,12 +35,12 @@ function Navigation() {
             </a>
           </li>
           <li className="nav-item">
-            <a href="https://github.com/divyanksingh678-source" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               className="nav-link">
-              GitHub
-            </a>
+            <NavLink
+              to="/media"
+              className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            >
+              Media
+            </NavLink>
           </li>
         </ul>
       </div>

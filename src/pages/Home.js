@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import profilePhoto from '../image/ChatGPT Image Apr 24, 2026, 11_19_03 AM.png';
 
 function Home() {
   return (
@@ -10,13 +11,13 @@ function Home() {
           <div className="profile-section">
             <div className="profile-picture-container">
               <div className="profile-picture">
-                <span className="profile-placeholder">📸</span>
+                <img src={profilePhoto} alt="Divyank Singh" />
               </div>
-              <p className="profile-caption">Your Photo Here</p>
+              <p className="profile-caption">Divyank Singh</p>
             </div>
             <h1 className="hero-title">Divyank Singh</h1>
             <p className="hero-subtitle">CSE Student | Roboticist | AI Enthusiast</p>
-            <p className="hero-location">📍 Hyderabad, India</p>
+            <p className="hero-location">Hyderabad, India</p>
           </div>
         </div>
       </section>
@@ -25,9 +26,9 @@ function Home() {
       <section className="about-section">
         <h2>About Me</h2>
         <p className="about-text">
-          I am Divyank Singh, a Computer Science Engineering student at Mahindra University with a strong interest in 
-          robotics, artificial intelligence, and automation. I enjoy building real-world projects that combine software and 
-          hardware, especially in areas like autonomous systems and drone technology. I am passionate about innovation and 
+          I am Divyank Singh, a Computer Science Engineering student at Mahindra University with a strong interest in
+          robotics, artificial intelligence, and automation. I enjoy building real-world projects that combine software and
+          hardware, especially in areas like autonomous systems and drone technology. I am passionate about innovation and
           continuously learning new technologies to create impactful solutions.
         </p>
       </section>
@@ -37,23 +38,23 @@ function Home() {
         <h2>Research Interests</h2>
         <div className="interests-grid">
           <div className="interest-card">
-            <span className="interest-icon">🤖</span>
+            <span className="interest-icon">Robotics</span>
             <h3>Robotics & Autonomous Systems</h3>
           </div>
           <div className="interest-card">
-            <span className="interest-icon">🧠</span>
+            <span className="interest-icon">AI</span>
             <h3>Artificial Intelligence & Machine Learning</h3>
           </div>
           <div className="interest-card">
-            <span className="interest-icon">🚁</span>
+            <span className="interest-icon">Drone</span>
             <h3>Drone Technology & Surveillance</h3>
           </div>
           <div className="interest-card">
-            <span className="interest-icon">🗺️</span>
+            <span className="interest-icon">Maps</span>
             <h3>SLAM & Navigation</h3>
           </div>
           <div className="interest-card">
-            <span className="interest-icon">⚙️</span>
+            <span className="interest-icon">Automation</span>
             <h3>Industrial Automation</h3>
           </div>
         </div>
@@ -65,26 +66,26 @@ function Home() {
         <div className="details-content">
           <div className="details-column">
             <div className="detail-item">
-              <span className="detail-label">👤 Name:</span>
+              <span className="detail-label">Name:</span>
               <span className="detail-value">Divyank Singh</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">📍 Location:</span>
+              <span className="detail-label">Location:</span>
               <span className="detail-value">Hyderabad, India</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">🎓 Education:</span>
-              <span className="detail-value">B.Tech (CSE), Mahindra University (2023–Present)</span>
+              <span className="detail-label">Education:</span>
+              <span className="detail-value">B.Tech (CSE), Mahindra University (2023-Present)</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">📊 CGPA:</span>
+              <span className="detail-label">CGPA:</span>
               <span className="detail-value">6.46 / 10</span>
             </div>
           </div>
 
           <div className="details-column">
             <div className="detail-item">
-              <span className="detail-label">📧 College Email:</span>
+              <span className="detail-label">College Email:</span>
               <span className="detail-value">
                 <a href="mailto:se23ucse056@mahindrauniversity.edu.in">
                   se23ucse056@mahindrauniversity.edu.in
@@ -92,7 +93,7 @@ function Home() {
               </span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">🔗 LinkedIn:</span>
+              <span className="detail-label">LinkedIn:</span>
               <span className="detail-value">
                 <a href="https://www.linkedin.com/in/divyank-singh-151335281" target="_blank" rel="noopener noreferrer">
                   divyank-singh-151335281
@@ -100,7 +101,7 @@ function Home() {
               </span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">💻 GitHub:</span>
+              <span className="detail-label">GitHub:</span>
               <span className="detail-value">
                 <a href="https://github.com/divyanksingh678-source" target="_blank" rel="noopener noreferrer">
                   divyanksingh678-source

@@ -10,10 +10,10 @@ function Media() {
   const mediaSections = [
     {
       id: 1,
-      title: 'Project Videos',
-      type: 'Video placeholder',
+      title: 'Demo Videos',
+      type: 'Motion',
       description:
-        'Add demo videos here for your robotics, AI, and embedded systems projects. You can later replace each placeholder with a local video file or an embedded YouTube link.',
+        'Short project demos are often the fastest way to understand what a system actually does, especially for robotics and field-oriented work.',
       items: [
         {
           title: 'Sky Eye drone monitoring demo',
@@ -41,10 +41,10 @@ function Media() {
     },
     {
       id: 2,
-      title: 'Project Images',
-      type: 'Image placeholder',
+      title: 'Build Snapshots',
+      type: 'Visuals',
       description:
-        'Use this section for screenshots, circuit photos, project diagrams, and final results. It gives you one page where visitors can quickly browse your visual work.',
+        'These images capture setups, system views, and project moments that make the technical work feel more grounded and easier to explain.',
       items: [
         {
           title: 'Drone system setup photo',
@@ -56,26 +56,26 @@ function Media() {
         },
         {
           title: 'Arduino wiring and sensor image',
-          preview: <div className="media-frame">Preview area</div>
+          preview: <div className="media-frame">Add next build photo here</div>
         }
       ]
     }
   ];
 
   const steps = [
-    'Put your video or image files inside a folder like src/media.',
-    'Import those files into this page.',
-    'Replace each placeholder card with a video tag, image tag, or embedded project link.'
+    'Store future project files in a dedicated folder so the gallery stays organized.',
+    'Replace placeholders with a real image, video, or embedded demo whenever a project improves.',
+    'Keep this page practical: enough context to prove the work, without turning it into a giant dump of assets.'
   ];
 
   return (
     <div className="media-container">
       <header className="media-hero">
-        <p className="media-eyebrow">Project Showcase</p>
-        <h1>Project Videos and Images</h1>
+        <p className="media-eyebrow">Project Archive</p>
+        <h1>Video clips, screenshots, and build visuals from the projects I care about most.</h1>
         <p className="media-intro">
-          This page is a placeholder gallery for your project demos. As you collect better clips,
-          screenshots, and build photos, we can swap these placeholders with the real files.
+          This page is meant to feel like a working media shelf instead of a polished stock gallery. It gives each
+          project a place to show progress, not just describe it.
         </p>
       </header>
 
@@ -101,7 +101,11 @@ function Media() {
       </section>
 
       <section className="media-notes">
-        <h2>How to add your files later</h2>
+        <div className="media-notes-copy">
+          <p className="media-eyebrow">Workflow</p>
+          <h2>How I want this gallery to grow</h2>
+        </div>
+
         <div className="media-steps">
           {steps.map((step) => (
             <div key={step} className="media-step">

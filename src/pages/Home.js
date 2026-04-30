@@ -1,87 +1,144 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Home.css';
 import profilePhoto from '../image/ChatGPT Image Apr 24, 2026, 11_19_03 AM.png';
 
 function Home() {
+  const interests = [
+    { label: 'Robotics', title: 'Robotics & Autonomous Systems' },
+    { label: 'AI', title: 'Artificial Intelligence & Machine Learning' },
+    { label: 'Drone Tech', title: 'Drone Technology & Surveillance' },
+    { label: 'SLAM', title: 'SLAM & Navigation' },
+    { label: 'Automation', title: 'Industrial Automation' }
+  ];
+
+  const skills = [
+    {
+      title: 'Programming Languages',
+      tags: ['C', 'Java', 'Python', 'JavaScript']
+    },
+    {
+      title: 'Web Technologies',
+      tags: ['HTML', 'CSS', 'React', 'React Router']
+    },
+    {
+      title: 'Tools & Technologies',
+      tags: ['ROS', 'Mission Planner', 'GitHub', 'Arduino', 'Computer Vision']
+    }
+  ];
+
   return (
     <div className="home-container">
-      {/* Hero Section */}
       <section className="hero">
+        <div className="hero-glow hero-glow-left" />
+        <div className="hero-glow hero-glow-right" />
+
         <div className="hero-content">
-          <div className="profile-section">
-            <div className="profile-picture-container">
+          <div className="hero-copy">
+            <p className="hero-kicker">Student builder focused on robotics, AI, and real-world systems</p>
+            <h1 className="hero-title">I like turning technical ideas into working things people can actually see and use.</h1>
+            <p className="hero-subtitle">
+              I am Divyank Singh, a Computer Science Engineering student at Mahindra University working across
+              robotics, autonomous systems, drones, and applied AI.
+            </p>
+
+            <div className="hero-actions">
+              <NavLink to="/projects" className="hero-button hero-button-primary">
+                Explore Projects
+              </NavLink>
+              <NavLink to="/media" className="hero-button hero-button-secondary">
+                View Media
+              </NavLink>
+            </div>
+
+            <div className="hero-notes">
+              <div className="hero-note">
+                <span className="hero-note-label">Location</span>
+                <strong>Hyderabad, India</strong>
+              </div>
+              <div className="hero-note">
+                <span className="hero-note-label">Current Focus</span>
+                <strong>Robotics, AI, drones, automation</strong>
+              </div>
+            </div>
+          </div>
+
+          <aside className="profile-panel">
+            <div className="profile-card">
               <div className="profile-picture">
                 <img src={profilePhoto} alt="Divyank Singh" />
               </div>
-              <p className="profile-caption">Divyank Singh</p>
+              <div className="profile-card-copy">
+                <p className="profile-caption">Divyank Singh</p>
+                <p className="profile-role">CSE Student | Roboticist | AI Enthusiast</p>
+              </div>
             </div>
-            <h1 className="hero-title">Divyank Singh</h1>
-            <p className="hero-subtitle">CSE Student | Roboticist | AI Enthusiast</p>
-            <p className="hero-location">Hyderabad, India</p>
-          </div>
+
+            <div className="profile-status">
+              <span className="status-dot" />
+              Building practical systems for robotics and field projects
+            </div>
+          </aside>
         </div>
       </section>
 
-      {/* About Me Section */}
-      <section className="about-section">
-        <h2>About Me</h2>
+      <section className="about-section section-card">
+        <div className="section-heading">
+          <p className="section-kicker">About Me</p>
+          <h2>Tech feels most exciting to me when it leaves the screen and starts interacting with the real world.</h2>
+        </div>
         <p className="about-text">
-          I am Divyank Singh, a Computer Science Engineering student at Mahindra University with a strong interest in
-          robotics, artificial intelligence, and automation. I enjoy building real-world projects that combine software and
-          hardware, especially in areas like autonomous systems and drone technology. I am passionate about innovation and
-          continuously learning new technologies to create impactful solutions.
+          I enjoy building projects that combine software and hardware, especially in areas like autonomous systems,
+          drone technology, and intelligent monitoring. I am drawn to work that feels hands-on, slightly messy, and
+          rewarding to iterate on, whether that means testing navigation logic, tuning a system, or improving how a
+          project behaves outside a controlled demo.
         </p>
       </section>
 
-      {/* Research Interests Section */}
       <section className="interests-section">
-        <h2>Research Interests</h2>
+        <div className="section-heading section-heading-inline">
+          <div>
+            <p className="section-kicker">Research Interests</p>
+            <h2>Areas I keep coming back to</h2>
+          </div>
+          <p className="section-side-note">A mix of software depth and real-world engineering problems.</p>
+        </div>
+
         <div className="interests-grid">
-          <div className="interest-card">
-            <span className="interest-icon">Robotics</span>
-            <h3>Robotics & Autonomous Systems</h3>
-          </div>
-          <div className="interest-card">
-            <span className="interest-icon">AI</span>
-            <h3>Artificial Intelligence & Machine Learning</h3>
-          </div>
-          <div className="interest-card">
-            <span className="interest-icon">Drone</span>
-            <h3>Drone Technology & Surveillance</h3>
-          </div>
-          <div className="interest-card">
-            <span className="interest-icon">Maps</span>
-            <h3>SLAM & Navigation</h3>
-          </div>
-          <div className="interest-card">
-            <span className="interest-icon">Automation</span>
-            <h3>Industrial Automation</h3>
-          </div>
+          {interests.map((interest) => (
+            <article key={interest.title} className="interest-card">
+              <span className="interest-icon">{interest.label}</span>
+              <h3>{interest.title}</h3>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* Personal Details Section */}
-      <section className="details-section">
-        <h2>Personal Details</h2>
+      <section className="details-section section-card">
+        <div className="section-heading">
+          <p className="section-kicker">Personal Details</p>
+          <h2>The practical side</h2>
+        </div>
+
         <div className="details-content">
           <div className="details-column">
             <div className="detail-item">
-              <span className="detail-label">Name:</span>
+              <span className="detail-label">Name</span>
               <span className="detail-value">Divyank Singh</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Location:</span>
+              <span className="detail-label">Location</span>
               <span className="detail-value">Hyderabad, India</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Education:</span>
+              <span className="detail-label">Education</span>
               <span className="detail-value">B.Tech (CSE), Mahindra University (2023-Present)</span>
             </div>
           </div>
 
-          <div className="details-column">
+          <div className="details-column details-column-offset">
             <div className="detail-item">
-              <span className="detail-label">College Email:</span>
+              <span className="detail-label">College Email</span>
               <span className="detail-value">
                 <a href="mailto:se23ucse056@mahindrauniversity.edu.in">
                   se23ucse056@mahindrauniversity.edu.in
@@ -89,7 +146,7 @@ function Home() {
               </span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">LinkedIn:</span>
+              <span className="detail-label">LinkedIn</span>
               <span className="detail-value">
                 <a href="https://www.linkedin.com/in/divyank-singh-151335281" target="_blank" rel="noopener noreferrer">
                   divyank-singh-151335281
@@ -97,7 +154,7 @@ function Home() {
               </span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">GitHub:</span>
+              <span className="detail-label">GitHub</span>
               <span className="detail-value">
                 <a href="https://github.com/divyanksingh678-source" target="_blank" rel="noopener noreferrer">
                   divyanksingh678-source
@@ -108,40 +165,25 @@ function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section className="skills-section">
-        <h2>Skills</h2>
+        <div className="section-heading section-heading-inline">
+          <div>
+            <p className="section-kicker">Skills</p>
+            <h2>Tools I reach for often</h2>
+          </div>
+        </div>
+
         <div className="skills-container">
-          <div className="skill-category">
-            <h3>Programming Languages</h3>
-            <div className="skills-list">
-              <span className="skill-tag">C</span>
-              <span className="skill-tag">Java</span>
-              <span className="skill-tag">Python</span>
-              <span className="skill-tag">JavaScript</span>
-            </div>
-          </div>
-
-          <div className="skill-category">
-            <h3>Web Technologies</h3>
-            <div className="skills-list">
-              <span className="skill-tag">HTML</span>
-              <span className="skill-tag">CSS</span>
-              <span className="skill-tag">React</span>
-              <span className="skill-tag">React Router</span>
-            </div>
-          </div>
-
-          <div className="skill-category">
-            <h3>Tools & Technologies</h3>
-            <div className="skills-list">
-              <span className="skill-tag">ROS</span>
-              <span className="skill-tag">Mission Planner</span>
-              <span className="skill-tag">GitHub</span>
-              <span className="skill-tag">Arduino</span>
-              <span className="skill-tag">Computer Vision</span>
-            </div>
-          </div>
+          {skills.map((category) => (
+            <article key={category.title} className="skill-category">
+              <h3>{category.title}</h3>
+              <div className="skills-list">
+                {category.tags.map((tag) => (
+                  <span key={tag} className="skill-tag">{tag}</span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </div>

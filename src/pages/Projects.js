@@ -9,7 +9,7 @@ function Projects() {
       duration: 'Dec 2023 - Present',
       type: 'Independent Project',
       description:
-        'A drone-based surveillance system designed to monitor security threats in crowded environments using vision-based analysis. The system aims to improve safety and real-time monitoring using intelligent detection.',
+        'A drone-based surveillance system designed to monitor security threats in crowded environments using vision-based analysis and real-time observation.',
       technologies: ['Drone Systems', 'Computer Vision', 'AI Concepts', 'Python'],
       link: '#/media',
       icon: 'Drone'
@@ -20,7 +20,7 @@ function Projects() {
       duration: 'June 2023 - July 2023',
       type: 'Independent Project',
       description:
-        'Developed an autonomous mobile robot using ROS. Implemented SLAM for mapping unknown environments and navigation algorithms for path planning. The project involved real-world robotics and autonomous navigation challenges.',
+        'A ROS-based autonomous robot project focused on SLAM, path planning, and practical navigation behaviour in changing environments.',
       technologies: ['ROS', 'SLAM', 'Navigation Stack', 'Python', 'C++'],
       link: '#/media',
       icon: 'Robot'
@@ -31,81 +31,99 @@ function Projects() {
       duration: 'Ongoing',
       type: 'Independent Project',
       description:
-        'A collection of embedded system projects using Arduino Uno, including sensor-based automation and basic robotics experiments. These projects explore embedded C programming and microcontroller applications.',
+        'A growing collection of embedded system experiments involving sensors, automation workflows, and low-level hardware integration.',
       technologies: ['Arduino Uno', 'Embedded C', 'Sensors', 'Electronics'],
       link: '#/media',
       icon: 'Circuit'
     }
   ];
 
+  const contactCards = [
+    {
+      title: 'Get in Touch',
+      copy: 'If you want to discuss a project, collaboration, or internship opportunity, email is the easiest way to reach me.',
+      link: 'mailto:se23ucse056@mahindrauniversity.edu.in',
+      label: 'Email Me'
+    },
+    {
+      title: 'LinkedIn',
+      copy: 'I share my academic and project background here, and it is the best place for a professional introduction.',
+      link: 'https://www.linkedin.com/in/divyank-singh-151335281',
+      label: 'Visit Profile',
+      external: true
+    },
+    {
+      title: 'Project Media',
+      copy: 'This page collects working demos, screenshots, and project visuals instead of leaving everything buried in code.',
+      link: '#/media',
+      label: 'Open Media Page'
+    }
+  ];
+
   return (
     <div className="projects-container">
-      <div className="projects-header">
-        <h1>My Projects</h1>
-        <p>Explore my work in robotics, AI, and embedded systems</p>
-      </div>
+      <header className="projects-header">
+        <p className="projects-kicker">Selected Work</p>
+        <h1>Projects that sit somewhere between coursework, curiosity, and real engineering effort.</h1>
+        <p className="projects-intro">
+          Most of these started from genuine technical interest and then became opportunities to learn by building,
+          testing, and improving something tangible.
+        </p>
+      </header>
 
-      <div className="projects-grid">
+      <section className="projects-grid">
         {projects.map((project) => (
-          <div key={project.id} className="project-card">
-            <div className="project-icon">{project.icon}</div>
+          <article key={project.id} className="project-card">
+            <div className="project-topline">
+              <span className="project-icon">{project.icon}</span>
+              <span className="project-badge">{project.type}</span>
+            </div>
+
             <h2 className="project-title">{project.title}</h2>
 
             <div className="project-meta">
-              <span className="project-duration">Duration: {project.duration}</span>
-              <span className="project-type">Type: {project.type}</span>
+              <span className="project-duration">Timeline: {project.duration}</span>
             </div>
 
             <p className="project-description">{project.description}</p>
 
             <div className="project-technologies">
-              <h4>Technologies Used:</h4>
+              <h4>Technologies Used</h4>
               <div className="tech-list">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-badge">{tech}</span>
+                {project.technologies.map((tech) => (
+                  <span key={tech} className="tech-badge">{tech}</span>
                 ))}
               </div>
             </div>
 
             <a href={project.link} className="project-link">
-              View project media
+              Open project media
             </a>
-          </div>
+          </article>
         ))}
-      </div>
+      </section>
 
       <section className="additional-info">
-        <h2>Want to know more?</h2>
+        <div className="additional-copy">
+          <p className="projects-kicker">More Context</p>
+          <h2>There is usually a build story behind every polished screenshot.</h2>
+        </div>
+
         <div className="info-cards">
-          <div className="info-card">
-            <span className="info-icon">Email</span>
-            <h3>Get in Touch</h3>
-            <p>Feel free to reach out via email</p>
-            <a href="mailto:se23ucse056@mahindrauniversity.edu.in" className="info-link">
-              Email Me
-            </a>
-          </div>
-          <div className="info-card">
-            <span className="info-icon">Profile</span>
-            <h3>LinkedIn</h3>
-            <p>Connect with me on LinkedIn</p>
-            <a
-              href="https://www.linkedin.com/in/divyank-singh-151335281"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="info-link"
-            >
-              Visit Profile
-            </a>
-          </div>
-          <div className="info-card">
-            <span className="info-icon">Media</span>
-            <h3>Project Media</h3>
-            <p>Open the page where you can showcase videos and images</p>
-            <a href="#/media" className="info-link">
-              Open Media Page
-            </a>
-          </div>
+          {contactCards.map((card) => (
+            <article key={card.title} className="info-card">
+              <h3>{card.title}</h3>
+              <p>{card.copy}</p>
+              <a
+                href={card.link}
+                className="info-link"
+                target={card.external ? '_blank' : undefined}
+                rel={card.external ? 'noopener noreferrer' : undefined}
+              >
+                {card.label}
+              </a>
+            </article>
+          ))}
         </div>
       </section>
     </div>
